@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  elasticsearch:
+    platform: linux/x86_64
+    image: elasticsearch:8.9.1
+    ports:
+      - '9211:9211'
+      - '9311:9311'
+
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
